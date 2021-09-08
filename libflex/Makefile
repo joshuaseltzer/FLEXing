@@ -25,6 +25,9 @@ $(TWEAK_NAME)_FRAMEWORKS = CoreGraphics UIKit ImageIO QuartzCore
 $(TWEAK_NAME)_LIBRARIES = sqlite3 z
 $(TWEAK_NAME)_CFLAGS += -fobjc-arc -w -Wno-unsupported-availability-guard $(IMPORTS) -g
 
+THEOS_PACKAGE_BASE_VERSION = 4.4.0-cobra2168
+_THEOS_INTERNAL_PACKAGE_VERSION = 4.4.0-cobra2168
+
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 before-stage::

@@ -5,8 +5,11 @@ include $(THEOS)/makefiles/common.mk
 
 TWEAK_NAME = FLEXing
 $(TWEAK_NAME)_GENERATOR = internal
-$(TWEAK_NAME)_FILES = Tweak.xm SpringBoard.xm
+$(TWEAK_NAME)_FILES = Tweak.xm
 $(TWEAK_NAME)_CFLAGS += -fobjc-arc -w
+
+THEOS_PACKAGE_BASE_VERSION = 1.3.1-cobra2168
+_THEOS_INTERNAL_PACKAGE_VERSION = 1.3.1-cobra2168
 
 include $(THEOS_MAKE_PATH)/tweak.mk
 

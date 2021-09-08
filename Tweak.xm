@@ -112,18 +112,18 @@ inline BOOL flexAlreadyLoaded() {
 }
 %end
 
-%hook UIStatusBarWindow
-- (id)initWithFrame:(CGRect)frame {
-    self = %orig;
-    
-    if (initialized) {
-        // Add long-press gesture to status bar
-        [self addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:manager action:show]];
-    }
-    
-    return self;
-}
-%end
+//%hook UIStatusBarWindow
+//- (id)initWithFrame:(CGRect)frame {
+//    self = %orig;
+//    
+//    if (initialized) {
+//        // Add long-press gesture to status bar
+//        [self addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithTarget:manager action:show]];
+//    }
+//    
+//    return self;
+//}
+//%end
 
 %hook FLEXExplorerViewController
 - (BOOL)_canShowWhileLocked {
